@@ -16,15 +16,10 @@ function App(){
   <div>
 <Body/>
   </div>
-  <div>
-   <div>
-    
-   </div>
-  </div>
-  <div>
+  {/* <div>
   <Footer/>
-
-  </div>
+  </div> */}
+  
   
   </div>
  )

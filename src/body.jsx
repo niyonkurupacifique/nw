@@ -1,4 +1,5 @@
 import React,{Component, useState} from "react"
+import Footer from "./footer"
 import card1 from './/card1.png'
 import card2 from './/card2.png'
 import card3 from './/card3.png'
@@ -14,6 +15,9 @@ import img1 from './/img1.jpg'
 import img2 from './/img2.png'
 import img3 from './/img3.jpg'
 import img4 from './/img4.jpg'
+import img5 from './/spic1.jpg'
+import img6 from './/spic2.jpg'
+
 
 
 import Calendar from "react-calendar"
@@ -24,6 +28,13 @@ import 'react-calendar/dist/Calendar.css';
 function Body(){
    const[months]=useState("Feb")
    const [day]=useState(12)
+   const [showmore,setShowmore]=useState(false)
+
+     function handleshowmore(){
+        setShowmore(true)
+        console.log(useState)
+     }
+
  return(
   <div className='h-screen'>
   <div className='text-center p-11 bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize'>
@@ -73,7 +84,7 @@ function Body(){
     </div>
     <div>
         
-    Nyarugenge Campus men’s <br/>team and Busogo women <br/>crowned champions
+    Nyarugenge Campus men’s team and Busogo women crowned champions
     </div>
    </div>
    <div className="flex mt-4 space-x-5">
@@ -82,29 +93,14 @@ function Body(){
     </div>
     <div>
         
-    UR and NTU seal partnership to <br/>accelerate learning through technology <br/>
+    UR and NTU seal partnership to accelerate learning through technology 
     </div>
    </div>
-   <div className="flex mt-4 space-x-5">
-    <div>
-        <img src={altoni3} alt="altoni" />
+  
+  
+   <div className='pl-11 text-blue-700'>
+    <button onClick={handleshowmore}>{showmore?'less news':'more news'}</button>
     </div>
-    <div>
-        
-New CMHS Principal vows to <br/>uphold college’s values and <br/>consolidate its successes
-    </div>
-   </div>
-   <div className="flex mt-4 space-x-5">
-    <div>
-        <img src={altoni4} alt="altoni" />
-    </div>
-    <div>
-        
-    UR & KSU relations gain <br/>momentum with the creation of <br/>Kent State University Centre in<br/>Rwanda
-    </div>
-    
-   </div>
-   <div className='pl-11 text-blue-700'>see all news</div>
     </div>
     <div className="bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize pl-10 space-y-10">
         <h1 className='mt-1 underline underline-offset-8'>Upcoming events</h1>
@@ -114,7 +110,7 @@ New CMHS Principal vows to <br/>uphold college’s values and <br/>consolidate i
          <p> {day}</p>
         </div>
             <div className='text-sm'>
-            Research <br/>Cooperation for<br/> Socioeconomic<br/> Transformation <br/>– Impact of 20 years <br/>of Research<br/> Cooperation between Rwanda and Sweden
+            Research Cooperation for Socioeconomic Transformation  Impact of 20 years of Research<br/> Cooperation between Rwanda and Sweden
             
             </div>
         </div>
@@ -151,13 +147,13 @@ New CMHS Principal vows to <br/>uphold college’s values and <br/>consolidate i
    
     
         
-   Announcement to Register for <br/>Entry Exam in Bachelor of <br/>Medicine and Surgery with<br/> Honours & Bsc with honors in<br/> Dental Surgery Programs
+   Announcement to Register for Entry Exam in Bachelor of Medicine and Surgery with Honours & Bsc with honors in<br/> Dental Surgery Programs
 
    </div>
    <div className="flex mt-6 space-x-5">
 
         
-    UR & KSU relations gain <br/>momentum with the creation of <br/>Kent State University Centre in<br/>Rwanda
+    UR & KSU relations gain momentum with the creation of Kent State University Centre in<br/>Rwanda
 
     
    </div>
@@ -173,13 +169,45 @@ New CMHS Principal vows to <br/>uphold college’s values and <br/>consolidate i
 
 
   </div>
-  <div className='grid grid-cols-4'>
-    <div>a</div>
-    <div>b</div>
-    <div>c</div>
-    <div>d</div>
+ <div className='flex  pt-10 pl-3 space-x-2'>
+    <div>
+        <img src={img1} alt="" />
+    </div>
+    <div>
+    <img src={img2} alt="" /> 
+    </div>
+    <div>
+    <img src={img3} alt="" />  
+    </div>
+    <div>
+    <img src={img4} alt="" />  
+    </div>
 
-  </div>
+ </div>
+ <div className="flex justify-center pt-4 text-center p-11 bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize">
+    <h1>Our Partner Universities<br/>
+Connect with UR</h1>
+ </div>
+ <div className="flex flex-row px-5 space-x-3 bg-black bg-transparent">
+    <div>
+        <h1 className="text-center underline underline-offset-8 decoration-blue-500 bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize">Featured Researcher</h1>
+        <img src={img5} alt="" />
+    </div>
+    <div>
+    <h1 className="text-center underline underline-offset-8 decoration-blue-500 bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize">Women at UR</h1>
+        <img src={img6} alt="" />
+    </div>
+    <div>
+    <div className="h-full">
+    <h1 className="text-center underline underline-offset-8 decoration-blue-500 bg-white text-blue-800  font-whystudyurfontweight font-headerFont text-whystudyurFontSize">Our videos</h1>
+    <iframe width="380" height="340" src="https://www.youtube.com/embed/AScmsMb2Lzs" title="🔴LIVE: UR GRADUATION CEREMONY 18-11-2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    </div>
+
+ </div>
+ <div>
+    <Footer></Footer>
+ </div>
  
   </div>
  )
